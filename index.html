@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-name">
+            My To-Do-List
+        </div>
+
+    </div>
+    <div id="navigation" class="navigation">
+        <div style="flex-grow: 80; padding-right: 38px;">
+            <input type="text" id="searchInput" placeholder="Search..." oninput="searchTasks()">
+        </div>
+        <div style="flex-grow: 11; padding-right: 8px;">
+            <select name="sorts" id="sorts" onchange="sortTasks()">
+                <option value="default" selected>Sort By</option>
+                <option value="date">Modified Date (Descending)</option>
+                <option value="title">By Title (Ascending)</option>
+            </select>
+        </div>
+
+        <div style="flex-grow: 8">
+            <button type="button" class="create-button" onclick="create()">+ Create</button>
+        </div>
+    </div>
+
+    <p class="showListP"><span class="showList hide-checked" onclick="toggleCheckedTasks()">Show All List</span></p>
+
+    <div id="section">
+
+        <div id="list">
+
+        </div>
+
+
+        <!-- form -->
+        <div id="addList" class="modal" style="display:none">
+            <div class="createPopUp">
+                <h1>Create New To-Do-List</h1>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="addTitle">
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="addContent" rows="4" cols="50"></textarea>
+                </div>
+                <div style="text-align: right;padding-right: 45px;">
+                    <button class="cancelbtn" onclick="createCancel()">Cancel</button>
+                    <button class="savebtn" onclick="save()">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- edit -->
+        <div id="editList" class="modal" style="display:none">
+            <div class="editPopUp">
+                <h1>Edit To-Do-List</h1>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="editTitle">
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="editContent" rows="4" cols="50" style="resize: none;"></textarea>
+                </div>
+                <div class="checkBox">
+                    <input type="checkbox" id="editCheckBox">
+                    <label for="active" id="mark">Mark as completed</label>
+                </div>
+
+                <div style="text-align: right; padding-right: 45px;">
+                    <button class="cancelbtn" onclick="editCancel()">Cancel</button>
+                    <button class="updatebtn" onclick="update(id)">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- delete -->
+        <div id="deleteList" class="modal" style="display: none;">
+            <div class="deletePopUp">
+                <div class="deleteCss">
+                    <p class="part1">Delete To-Do List</p>
+                    <p class="part2">Are you sure you want to delete to-do list?</p>
+                    <p class="part3"> Title Here</p>
+
+                    <button class="cancelbtn" onclick="deleteCancel()">Cancel</button>
+                    <button class="dropbtn" onclick="drop(id)">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

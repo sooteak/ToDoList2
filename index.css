@@ -1,0 +1,476 @@
+#body {
+    top: 0px;
+    left: 0px;
+    width: 1366px;
+    height: 768px;
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+#header {
+    margin: 25px 50px 20px 50px;
+    /* width: 1266px; */
+    height: 52px;
+    /* transform: matrix(0, -1, -1, 0, 0, 0); */
+    /* UI Properties */
+    background: var(--unnamed-color-25a599) 0% 0% no-repeat padding-box;
+    background: #25a599 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.header-name {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 29px;
+    left: 29px;
+    width: 120px;
+    height: 20px;
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal bold 18px/21px var(--unnamed-font-family-arial);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    font: normal normal bold 18px/21px Arial;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.navigation {
+    /* border: 2px solid #25a599; */
+    display: flex;
+    margin: 20px 50px;
+    height: 34px;
+    flex-wrap: nowrap;
+}
+
+#searchInput {
+    /* top: 97px;
+    left: 50px; */
+    width: 100%;
+    height: 34px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 22px;
+    opacity: 1;
+    padding: 0 15px;
+    /* 添加内边距，使文字不紧贴边框 */
+    font-size: 14px;
+    /*设置字体大小*/
+}
+
+#searchInput::placeholder {
+    /* Placeholder text styles */
+    /* top: 106px; */
+    /* left: 79px; */
+    /* width: 64px;
+    height: 17px; */
+    padding-left: 29px;
+    font: normal normal normal 16px/18px Arial;
+    /* 字体、字体大小、行高 */
+    letter-spacing: 0px;
+    color: #8D8D8D;
+    /* 文本颜色 */
+    opacity: 1;
+}
+
+#sorts {
+    width: 100%;
+    height: 34px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 22px;
+    opacity: 1;
+    font-size: 14px;
+    /* 设置字体大小 */
+}
+
+#sorts option,
+select {
+    /* 选项文本的样式 */
+    padding-left: 29px;
+    font: normal normal normal 16px/18px Arial;
+    /* 字体、字体大小、行高 */
+    letter-spacing: 0px;
+    color: #8D8D8D;
+    /* 文本颜色 */
+    opacity: 1;
+}
+
+
+.create-button {
+    height: 34px;
+    width: 100%;
+    background: #F79421;
+    border: 1px solid #DDDDDD;
+    border-radius: 22px;
+    font: normal normal bold 14px/16px Arial;
+    color: white;
+    /* 文字颜色为白色 */
+    font-weight: bold;
+    /* 文字加粗 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+    opacity: 1;
+}
+
+.showListP {
+    text-align: right;
+    margin-left: auto;
+}
+
+.showList {
+    /* 按钮的样式 */
+    text-align: right;
+    margin-left: auto;
+    /* 将左边的margin设置为auto，使其靠右 */
+    margin-right: 50px;
+    /* 右侧margin为50px */
+    height: 17px;
+    font: normal normal normal 16px/18px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+    text-decoration: underline;
+    cursor: pointer;
+    /* 鼠标悬停时显示手型 */
+    opacity: 1;
+    /* 将span元素转为块级元素 */
+}
+
+
+/* 鼠标悬停时的样式 */
+.showList:hover {
+    top: 97px;
+    left: 1223px;
+    width: 93px;
+    height: 34px;
+    opacity: 1;
+}
+
+
+
+.modal {
+    /* display: none; */
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    padding-top: 100px;
+    /* Black w/ opacity */
+}
+
+.createPopUp {
+    top: 116px;
+    left: 330px;
+    width: 706px;
+    height: 410px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    opacity: 1;
+    margin: auto;
+}
+
+
+.editPopUp {
+    top: 116px;
+    left: 330px;
+    width: 706px;
+    height: 455px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    opacity: 1;
+    margin: auto;
+}
+
+
+.deletePopUp {
+    /* Layout Properties */
+    top: 116px;
+    left: 330px;
+    width: 706px;
+    height: 316px;
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    opacity: 1;
+    margin: auto;
+}
+
+.createPopUp h1,
+.editPopUp h1 {
+    padding: 47px 0 30px 46px;
+    height: 20px;
+    text-align: left;
+    font: normal normal bold 18px/21px Arial;
+    color: #F79421;
+    opacity: 1;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    padding-bottom: 19px;
+    padding-left: 46px;
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-18) var(--unnamed-font-family-arial);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    text-align: left;
+    font: normal normal bold 16px/18px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+    opacity: 1;
+    vertical-align: top;
+}
+
+.form-control {
+    top: 213px;
+    left: 465px;
+    width: 523px;
+    height: 34px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 22px;
+    opacity: 1;
+    margin-left: 54px;
+    padding-left: 20px;
+}
+
+textarea {
+    top: 259px;
+    left: 465px;
+    width: 523px;
+    height: 138px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 15px;
+    opacity: 1;
+    margin-left: 27px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.cancelbtn {
+    text-align: center;
+    font: normal normal bold 14px/16px Arial;
+    color: #101010;
+    background: transparent;
+    border: none;
+}
+
+.savebtn,
+.updatebtn {
+    /* Layout Properties */
+    top: 413px;
+    margin-left: 51px;
+    width: 93px;
+    height: 34px;
+    background: var(--unnamed-color-25a599) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #25A599 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    opacity: 1;
+    border-radius: 15px;
+    font: normal normal bold 14px/16px Arial;
+    color: #FFFFFF;
+}
+
+#editCheckBox {
+    margin-left: 46px;
+    width: 28px;
+    height: 28px;
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+#mark {
+
+    padding-left: 0;
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-18) var(--unnamed-font-family-arial);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    text-align: left;
+    font: normal normal bold 16px/18px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+    opacity: 1;
+    vertical-align: middle;
+}
+
+.checkBox input {
+    vertical-align: middle;
+}
+
+.deleteCss {
+    text-align: center;
+    padding: 80px;
+}
+
+.part1 {
+    height: 20px;
+    font: var(--unnamed-font-style-normal) normal bold 18px/21px var(--unnamed-font-family-arial);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: center;
+    font: normal normal bold 18px/21px Arial;
+    letter-spacing: 0px;
+    color: #FF0000;
+    opacity: 1;
+}
+
+.part2 {
+    height: 17px;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/23px var(--unnamed-font-family-arial);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    text-align: center;
+    font: normal normal normal 16px/23px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+}
+
+.part3 {
+    height: 20px;
+    font: var(--unnamed-font-style-normal) normal bold 18px/23px var(--unnamed-font-family-arial);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    text-align: center;
+    font: normal normal bold 18px/23px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+}
+
+.dropbtn {
+    margin-left: 115px;
+    width: 93px;
+    height: 34px;
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #FF0000 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    opacity: 1;
+    font: normal normal bold 14px/16px Arial;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+#section {
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.titlePart {
+    background: #FFF5EA;
+    width: 100%;
+    margin-bottom: 8px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    display: flex;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+img {
+    width: 25px;
+    margin-left: 50px;
+}
+
+.logo {
+    text-align: right;
+}
+
+.t-checkbox {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.title {
+    height: 17px;
+    text-align: left;
+    font: normal normal normal 16px/18px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+    opacity: 1;
+}
+
+.t-logo {
+    padding-top: 12px;
+    padding-right: 20px;
+}
+
+.time {
+    margin-top: 16px;
+    height: 17px;
+    text-align: right;
+    font: normal normal normal 16px/18px Arial;
+    letter-spacing: 0px;
+    color: #8D8D8D;
+    opacity: 1;
+}
+
+.content {
+    height: 59px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 16px/18px Arial;
+    letter-spacing: 0px;
+    color: #101010;
+    opacity: 1;
+    margin-left: 48px;
+}

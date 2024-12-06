@@ -1,0 +1,44 @@
+function isActive(id) {
+    var activeVal;
+    var showList = JSON.parse(localStorage.getItem('list'));
+    if (showList === null) {
+        console.error("showList is null");
+        return;
+    }
+    for (var i = 0; i < showList.length; i++) {
+        const checkbox = document.getElementById(`checkbox${i}`);
+        
+    // console.log(checkbox)
+        const activeCheckbox = document.getElementById('activeCheckbox');
+        
+    console.log(activeCheckbox)
+
+        // 从localStorage中获取保存的状态
+        const savedState = localStorage.getItem(`checkbox${i}`);
+        if (savedState !== null) {
+            checkbox.checked = JSON.parse(savedState);
+        }
+
+        if (checkbox !== null) {
+            checkbox.addEventListener('click', function() {
+              // 切换"active"类
+              this.classList.toggle('active');
+
+              // 设置activeCheckbox的checked属性与checkbox的checked属性相同
+              activeCheckbox.checked = this.checked;
+
+              // 保存checkbox的状态到localStorage
+              localStorage.setItem(`checkbox${i}`, this.checked);
+
+              // 检查是否具有"active"类，并在控制台中打印结果
+              if (this.classList.contains('active')) {
+                activeVal = 1;
+                console.log(activeVal);
+              } else {
+                activeVal = 0;
+                console.log(activeVal);
+              }
+            });
+        }
+    }
+}
