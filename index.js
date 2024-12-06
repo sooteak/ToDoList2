@@ -324,10 +324,10 @@ function toggleContent(index) {
     if (contentRow && toggleIcon) {
         if (contentRow.style.display === 'none' || contentRow.style.display === '') {
             contentRow.style.display = 'block'; // 或者其他你想要的显示方式
-            toggleIcon.src = 'logo/up.png'; // 切换为向上的图标
+            toggleIcon.src = 'up.png'; // 切换为向上的图标
         } else {
             contentRow.style.display = 'none';
-            toggleIcon.src = 'logo/down.png'; // 切换为向下的图标
+            toggleIcon.src = 'down.png'; // 切换为向下的图标
         }
     }
 }
